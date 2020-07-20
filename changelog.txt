@@ -1,0 +1,1043 @@
+
+v1.8.2.1 Release:
+-----------------
+- Message Box is shown in Keen 5 when fuses are broken
+- Soft collision detection, so Sprites can go through narrow sections in the games (Keen 5 for example has some levels with that issue)
+- Save name issues solved
+
+v1.8.2 Release:
+---------------
+- Lots of bug fixes
+- Vgamepad improved
+- Improved SDL 2 support with proper combination of OpenGL
+
+v1.8.0 Release:
+---------------
+- Dosbox fusion
+- A lot of dosbox fixes
+- Better mouse controls
+
+v1.7.3 Release:
+---------------
+- New submenu for mods
+- More fixes and AI improvements
+
+v1.7.2 Release:
+---------------
+- A lot of fixes
+
+v1.7.2 Beta:
+------------
+- More native resolutions if higher modes are used, especially in the launcher
+- Some improved physics
+- general bugs fixes as usual
+- Shorter game names
+
+v1.7.1 Alpha:
+-------------
+- Last window size is now saved automatically.
+- Heavy engine independent code cleanups which will make CG more flexible for new game engines besides Commander Keen
+- New GsLib will take more work at low level functions and will as wrapper for SDL and GUI elements
+- Multiple selection problem should be fixed now.
+- Even more smooth effects readded
+- More bug fixes
+- New pump event concept will solve a lot of deadlocks we previously had on the android versions.
+
+v1.6.5.5 Release:
+-----------------
+- Added Scrollbar for a bigger list of games
+- Wormmoutch bites again!
+
+v1.6.5.3 Beta:
+--------------
+- More effects readded
+- Many bug fixes especially Keen 1,2 and 4
+
+v1.6.5 Beta:
+------------
+- Internal Keen game resolution now selectable to 320x240 and 640x480
+- Gems and keycards are now reput in the level when one of multiplayer keen dies, making levels finishable in such cases
+- Full SDL 2.0 support
+- Intro Screen added
+- New Overlay theme for android 
+- Terror in Space mod supported
+- And a big bunch of bugs were resolve on the run
+
+v1.6.1 Release:
+---------------
+- A lot of bug fixes the last had
+- Keen can now stand on another keen in multiplayer mode
+
+v1.6 Release:
+-------------
+- XML based Savegame states in both galaxy and vorticon engine which in future 
+  will make those savegames more robust, when coming from older or newer versions. 
+  This means hopefully, no more crashes in savegames.
+- Up to four Players in Galaxy, with everyone having it's HUD
+- The HUD are now a bit translucent by default
+- Three new difficulty levels, making it six now...
+- Some enemies have new colours depending on how you play Keen
+
+v1.4.4 Release:
+---------------
+- More general bug fixes
+- Some neat menu and dialog effects
+- Now rending engine which drawing the game scene faster
+
+v1.4.3 Release:
+---------------
+- Teleportation Fixes in Keen 8. No effect in Keen 6 but the mod was unplayable (thanks to arjwz)
+- Carmack Unpack Fixes
+
+v1.4.2 Release:
+---------------
+- More bug fixes (thanks to arjwz)
+
+v1.4.1 Release:
+---------------
+- Graphical glitch fixes, which were seen in Vorticons Keen without HQP
+
+v1.4 Release:
+-------------
+- Keen 6 improvements
+- Rendering time improvements
+
+v1.4 Beta:
+----------
+- SDL_Image now used for HQP
+- Sound improvements and music fixes (Thanks to NY00123)
+- XCode Updates (Thanks to Pizza2004)
+- Full Keen 6 Support
+- Full Keen 8 Support (Mod by Ceilick)
+- AI Fixes for Keen 5 Enemies
+
+v1.2 Beta: 
+----------
+- More game state fixes
+- Keen 5 support is fully implemented
+- Partial Keen 6 support. Only one AI works so far.
+- HQP Support for new music tunes. The next HQP will feature new Keen 4 tunes with better quality, which can be played with that version
+
+v1.0 Release: 
+-------------
+- Everything but with more bug fixes
+
+v1.0 RC: 
+--------
+- HUD Effects implemented. might become optional if demanded
+- The try-again message is back and much better to the original
+- As usual a lot of bug fixes.
+- Routine for better speed and AI
+- Now menu is opened when any button in the title screen is pressed.
+
+v1.0 Beta6: 
+-----------
+- Some AIs are better
+- More Mods are now compatible
+- Better Player AI and Controls
+- Smoother animations
+
+
+v1.0 Beta5: 
+-----------
+- Some AIs are better
+- keen 7 more compatible
+- Better Player AI and Controls
+- Framerate should be a bit too
+
+v1.0 Beta4: 
+-----------
+- Change in version numbering. For the reason of that see the PCKF Forum
+- More Keen 5 support. Elevators (on map) and some Platforms are now working. Exit Door also trigger the exit level event now. Support got much better.
+- About 20 collision bug have been fixed providing a better experience
+- New transition effects
+- Better Timer, faster code.
+- New Scalers (Thanks to NY00123 for deep research)
+- Aspect Correction (Also thanks to NY00123)
+- Vertical Blockers now also work in any map.
+- The Readme has been updated and explains better the mission of CG. You can also read that on Github for those who are interested and might want to discuss it on IRC or whereever you find me.
+- Flying Foot is in!
+- Inchworms are in!
+- Keen 7 mod Support. I think fully, as far I can see (Great Mod Ceilick)
+- New Item effects
+- Better playability in the underwater Level.
+- More general effects
+- Better Enemy AIs although some still need more work.
+- Secret level fully working
+- GameState loading and saving improved a lot
+- Mimrocks improved
+
+
+v0.4.0 Beta3: 
+-------------
+- Menus con now be controlled by the mouse and behave like Window Frames
+- Galaxy engine has also much better menus
+- Engine got some changes which make it more stable
+- Galaxy got save and load game feature
+- New Launcher Menu
+- New video rendering engine
+- Improved handheld support
+- Improved AIs in Galaxy engine
+- Improved Multiplayer Experience. Now there is a special cambutton, so players can cooperate
+- More Input devices are now supported.
+- New Galaxy AIs
+- fixed about 30 bugs
+
+v0.3.8 Alpha:
+-------------
+- Resizable Windows and playable at any resolution
+- More Enemies in Galaxy Support
+- Lots of speed ups
+- Better Galaxy Support
+- Better Sound Support
+
+v0.3.5:
+-------
+- Fixes in the finale of Ep1
+- Now Rising points dissappear fading
+- Better Audio read out for Galaxy
+- Stereo Sound fixes
+- CalcVisibility is now also used in Galaxy, what make the engine much faster when having many objects
+
+v0.3.4:
+-------
+- Slugs are smarter and can kill now
+- Keen can get and use the diving suit
+- Miragia now behaves correctly on map
+- Keen now dies correctly and a selection dialog is shown
+
+v0.3.3.4:
+---------
+- New automation theorie based actions for AI in the Keen Player galaxy structure, for better and faster gameplay
+- Fixed small issues
+
+v0.3.3.3:
+---------
+- Now Council Members trigger and make the level exit. Neat!
+- New Collision Model for Galaxy. Hopefully better especially on sloped tiles. Also that part of the code got smaller
+- Vertical and Drop Platforms work which will make more levels finishable
+- Keen now can jump through some tiles and also leave platforms
+- Now the platforms also move Keen
+- The Platform AIs have a special directory in the source code
+- Cheat codes in Galaxy are implemented: God-mode, Jump-cheat, No clipping and get all items! 
+- Songlist of some mods can alternatively be used
+
+v0.3.3.2:
+---------
+- Thanks to Malvineous IMF Player got a bit faster. He found an interesting slow down in our code
+- Now switches for platforms and bridges work
+- Big IMF Bug I discovered has been fixed which produced crashes on some systems
+- Better Platform code
+- Some PC-Speaker sound improvements
+- New CG Core which has a bit less code, is easier to understand, 
+  uses more smartpointers and also seems to be a bit faster.
+- Less graphic glitches in OpenGL Mode
+  
+
+v0.3.3.1:
+---------
+- Tied up some code!
+- New Audio System!
+- New Graphics System!
+- Fixes in the IMF Player 
+- Audio changes now Keen Galaxy has sounds (also thanks to FCTW for his help!)
+- Keen 5 Support initial support. (Thanks to furan for his help and cleaning up some code is it!)
+- Council members, slugs and platforms are in. They don't work properly yet (Also many thanks to FCTW!)
+- New Packages are available. Now Windows Installer is shipped and the Deb Packages are updated!
+
+v0.3.3:
+-------
+- New audio system/manager
+- Vorticon can also open and play IMF Files for music
+- Fixes of a whole bunch of bugs
+- Savegame system should work better
+- On embedded systems the save state is written automatically putting date and level number
+- more space for name in the save/load game section
+- Small performance improvements, especially when loading Vorticon Keen games
+- Better stereo Sound!
+- Physics improvements
+- Galaxy Keen now plays ingame music, finally!!!
+
+v0.3.2.5:
+---------
+- Keen now can climb poles (Galaxy)
+- Keen now can hang on cliff and climb then up (Galaxy)
+- Some bug fixes.
+- Many new features in Galaxy. Keen can do a lot of things now...
+- improved some galaxy physics
+
+v0.3.2.4:
+---------
+- Less load time
+- Added nice Loading Screen
+- Diagonal Keys are now supported
+- Improved the hq sound quality
+- minor bug fixes
+- New threadpool which is used by the Loading Screen
+
+v0.3.2.3:
+---------
+- Now Game shouldn't crash when playing music
+- improved Vorticon physics
+
+v0.3.2.2:
+---------
+- Music is now streamed
+- Added tremor support
+- Even better Sound support
+- Several physic changes
+- Keen now can walk in levels in Galaxy
+- More mods are supported
+
+v0.3.2.1:
+---------
+- more AI fixes
+- Added support for mods which use the palette patch code
+- 48 Khz is back again, after many months, but this time working correctly!
+- better push and bump physics
+- more of the Galaxy Engine. Keen now can walk on map.
+- Added Cannon fire sound
+- Added HUD Display, the one Chad had suggested
+- Small memory issues fixed
+- Improved memory management for foes.
+- Keen 4 now works and can be played on map
+- even faster and more Badass!
+
+v0.3.2:
+---------
+- OpenGL improvements especially for iPhone!!
+- Faster Game loads!
+- Other segfault fixes!!
+- Improved Mod support (Especially for Keen X and Yorphius II)
+- Now HQ Sprites are supported!
+- faster loading maps algorithm and less memory used
+- more Galaxy Code!
+- Code cleanups!
+- Improved Patch-Code
+- Improved Garg AI
+- Improved Scrub AI
+- Teleporter fixes
+- Now enemies blink, when they get a hit
+- Small improvement of the player physics
+- New configuration file parser which makes loading and saving even faster!
+
+v0.3.1.3:
+---------
+- Savegames are now separated per game
+- bit more galaxy code
+- fixed filename search problems
+- even faster and more colourful menu
+
+v0.3.1.2:
+---------
+- a bit faster and more colourful menu
+
+v0.3.1.1:
+---------
+- Volume sliders
+- Camera bounds config
+- Older savegame compatibility... (to version 0.3.0.4)
+
+v0.3.1.0:
+---------
+
+01-03-2010
+- Most of the bugs reported on Trac have been fixed.
+- We have finally another release!
+
+31-01-2010
+- Improved Bump function, which makes Keen push, when touched by a yorp a similar foe
+- Imrpoved the yorp behaviour, when Keen touches him. It should be like in the original also.  
+- Scrubs got stuck when walking over just one tile. fixed...
+- Changes in the Voritcon Elite. It should be like in the original now. Please verify!
+- Changes in the Tank Robot AI Ep 1
+
+19-01-2010
+- Changes in the Vortininja Ep3
+- Changes in the Tank Robot AI Ep 1
+
+17-01-2010
+- Improved AI of Tank Robots, Elite, Ninjas, Gargs, Foob, Vortikids. The still need to be checked against doskeen
+- Improved the player-physics a bit
+- Fixed many other crashes
+
+07-01-2010
+- Improved Multiplayer experience a bit (Still WIP)
+
+06-01-2010
+- New collision system which now is shared with all foes and the player
+- improved some AI (Tulip). Some are still missing
+- fixed memory leaks
+- fixed other issues and crashes
+- Small speed up!
+
+30-12-2009
+- Added more Keen4 code and fixed errors with the huffman decompression
+- Fixed AI Bugs of baby-vorticon
+- Fixed AI Bugs of meep
+- Fixed minor problems we had with AI
+- Fixed an animation errors with priority tiles
+
+29-12-2009
+- Fixed some enemy issues
+- Integrated some Keen 4 Code, which still is under construction
+- Integrated a better unlzexe algorithm.
+- Nessie now should work correctly!
+- Changed Tile animation speed
+
+18-12-2009
+- Added enemies of Ep 2 back. All are avialable now, but still buggy.
+- fixed minor collision problems
+- fixed other minor issues and segfaults
+
+16-12-2009
+- Slippery ice tiles are working again as before! Keen can semi/slide on them
+
+15-12-2009
+- Minor fixes
+- New effects class. Vibration and Vorticon shot scene in EP1 are working again.
+- New Merge Colour effect, which can be seen, when player enters a level
+
+13-12-2009
+- Added Vorticon Elite back to CG
+
+12-12-2009
+- Added Tank-Robot of Episode 2 back
+- Physics improvements
+- Teleporter in Episode 3 don't need the exe file. But it's calculated now...
+- Teleporter are now read from the Exe-file in Episode 1 
+- Improved AI (Yorp)
+- Removed some ugly tiles on the title screen
+
+10-12-2009
+- Fixed some hidden segfaults and wrong inits, which provoked the yorps getting unstunnable
+- Now using the fonts.bmp file, we can use other font graphics (with hi-colour support!)
+
+09-12-2009
+- Fixed ice cannons to the engine. Now they are working again
+
+08-12-2009
+- Corrected start inventory for all Episodes
+- The Stone with Rope in Episode 1 Level 16 is working again!
+- The Tank Robot of Episode 1 is working again!rtin
+
+07-12-2009
+- Added Easy mode. It's still has no function
+- Menus have been stripped down a bit (Pizza2004)
+
+06-12-2009
+- Now the YourPartsAreMissing has the original icons
+- The pogo is frozen. I did that for testing
+- Player doesn't fall anymore when level starts
+- Autoraygun option is working correctly again!
+- Godmode on map is working correctly again
+- The option level-replayability is working once again!
+- Yorps are screaming correctly again, when they are shot
+
+05-12-2009
+- New Playgame Engine System
+- The entire Code has been rewritten in order to support more games (Galaxy for example)
+- Much more solid engine
+- New and innovative Savegame System (Pizza2004)
+- New Physics [WIP] (Tulip)
+- Better timer that makes the game much faster (Pickle)
+
+v0.3.0.4:
+---------
+
+24-09-2009
+- New Map System. Now maps of any size can be used for CG
+
+11-09-2009
+- many bugs fixes (Many thanks to James K. Beard)
+- Graphical improvements and performance (Pickle)
+
+06-09-2009
+- The new Graphics Engine is fully implemented and can 
+  handle and speedup all the graphics (tiles, sprites, bitmaps, etc)
+- Improved Sound-System. Now 16 Bit is supported! (Many thanks to Pickle for his work!)
+- Improved 2-player camera and minor issues! (Many thanks to Pizza2004!)
+
+31-08-2009
+- graphics system nearly fully implemented
+- load menu cancel fixed
+- deleted savegames that came with
+- changed the way the camera works while in 2 player mode
+
+26-08-2009
+- better twirl on menus
+- fixed some bugs that basically froze gameplay
+- fixed and improved the aspect ratio feature
+- beginnings of new graphics system implemented
+
+25-08-2009
+- New Palette system (Thanks to Caitlin Shaw)
+- Physics improvement (Thanks to guys of the PCKF Forum)
+- Added TGA Graphics
+- fixed some bugs that were in the new Timer
+- Added new item rising effect (Caitlin Shaw)
+
+23-08-2009
+- Improved the timer much more. (Many thanks to Pickle!!!)
+- Solved message box bugs in Ep2.
+
+21-08-2009
+- New Menu System, compatible as ingame menu. (Still not implemented)
+- Modified lightly the pogo physics
+- removed some memory leaks
+- reduced the source code at some parts
+- fixed errors with mods
+
+19-08-2009
+- Added F1-Help Screen
+- Improved Gargs AI
+- Improved platform extender/retractor (bridges in Ep2)
+
+16-08-2009
+- Godmode now also makes keen fly with pogo
+- Pogo jump are more sensitive to the button press-time.
+- Improved High-Score System
+
+15-08-2009
+- New TextViewer for the Story Text and in future for others.
+
+14-08-2009
+- The Savegame system has been improved a lot!
+
+12-08-2009
+- New Timer System! At last!
+- Minor issues have been fixed
+
+09-08-2009
+- Added Window lights in the ending scene
+- Improved key-stacking logic
+
+08-08-2009
+- Better source-code. At least a little bit :-)
+- Special key items can only be taken once. Even replaying the levels
+- Now levels can be exited without doing something before through the exit door. Be careful ;-)
+- Vorticon Commander in Ep1 now dies with 105 shots.
+- Improved consistency of the program
+- Improved memory management when decompressing graphics 
+- Improved Enemys AI 
+
+05-08-2009
+- fixed crash when game in EP1 or 2 was ending
+- fixed fonts problems in story section.
+
+04-08-2009
+- Fixed some minor issues with mods [Sprite Replacement] (Tulip)
+- Added Ordering Info to Episode 1. Only works there!
+- Episode 1 is now bundled with the interpreter
+
+02-08-2009
+- Updated the PC-Speaker Sound emulation (Thx to Napalm for a great lesson!)
+
+01-08-2009
+- Masked tile can now use semi-transparent pixels. Silcar 3 ghosts use that (Tulip)
+- Implemented a new dialog system. Base for the future dialogs and menus
+- Minor issues
+
+26-07-2009
+- fixed some bugs which made the game crash
+- removed an old and obsolete class
+- The need of ep?attr.dat has been lifted and future versions won't bring that file anymore!
+
+25-07-2009
+Changes by Albert:
+- Implementation of Searchpath
+- Crash fixes
+- Improved memory managment of strings. No more chars
+- HTML code is printed to the console
+
+Changes by Gerstrong:
+- changed pogo physics a bit (Ceilick)
+- improved Patch Class for mods
+- changed physics of Vorticon Elite. Also has a new filenames (Tulip)
+- reduced some flags in some functions which are obsolete
+- implemented reset controls (Iv4n)
+
+18-07-2009
+- Dynamic loading of the EXE-File and special class for its manipulation. 
+  (including UNLZEXE and version retrieval)
+  This also improves the memory management in Story and Sounds extraction
+- Added basic support of pat-files. Only %patchfile entries are detected for now.
+
+17-07-2009
+- Tiles are now loaded once when the game starts, instead in every level
+- Implemented a class which is able to read strings out of exe-files
+  of the game. Sorry, but It still doesn't work and is disabled.
+  So no effects for now.
+- For Windows users: The Package should be much smaller now.
+
+16-07-2009
+- Improved Mod Support in reading tiles and bitmaps (Tulip)
+- Improved intro screen. More accurate to the original game now.
+
+15-07-2009
+- Improved Pogo physics (Ceilick)
+- Collision was broken. Fixed (Ceilick)
+- wrong version bug fixed (Tulip)
+- minor issues
+
+12-07-2009
+- Improved latch and spritefile decoder 
+- Improved physics on ice (thanks to Tulip)
+- Removed some bugs with Mortimer McMire (Ep3)
+
+11-07-2009
+- Fixed another Oggfile-leak and some crashes
+- Fixed the dialog problem when using Ship in Ep3
+
+10-07-2009
+- Improved Pogo behaviour and switch toggling (Tulip)
+- Level 12 Ep2 at last playable. Tile are correctly changed now
+- Animations of static image in Episode 2 works again!
+- Score table (Cities saved) was incorrect. Fixed
+- Improve performance of graphic elements (Especially HQBitmap)
+- Yorp and Garg Statue (Yes, again!)
+- Mounting Nessie works again!
+- Improved Keystacking feature
+
+09-07-2009
+- Added a more intelligent resolution system basing on 
+  resolutions.cfg, so anyone can add exotic resolutions
+- No cheating Pogo activation bug resolved
+- No more upper-case/lower-case Problems under Linux!
+  Automatic renaming where needed
+
+08-07-2009
+- Added Switch features for episode 1 and 3 (Mods need that) (Tulip)
+- Reduced a bit of source code.
+- Added 3 new resolution for wide-screeners
+- improved the resolution system.
+
+06-07-2009
+- Suggestion of the "Done" signs in "Level replayability" accepted (DaVince)
+
+04-07-2009
+- fixed some other bugs, especially difficulty bugs
+- fixed crash under windows, while choosing a another game (Tulip and others)
+- Intro can be skipped with any key again.
+- Improved the sound classes a bit (Less code)
+- Shooting through thin walls isn't possible anymore
+- improved the jump physics a bit
+- Enemy AI Improved, vortimom walks now faster (Tulip)
+- Replayability has been added!
+
+27-06-2009
+- Fixed a big memory leak in HQP Music
+- Fixed an item bug in level12 Episode 2. That level seems to be broken
+  in some versions. It wasn't playable. Now it is...
+ 
+26-06-2009
+- Fixed minor bugs (physics mainly) (Tulip)
+
+24-06-2009
+- Fixed story bugs (allocations) (Iv4n)
+- Pulsing choose enabled in most of the menus (Iv4n)
+
+21-06-2009
+- Crash of scale4x and hi-resolutions has been fixed! (Iv4n)
+- Added scale4x in software rendering mode (Iv4n)
+- Fixed Crash when loading keen2 or 3 fixed! (Iv4n)
+- Cixed some issues (Thanks to Iv4n!)
+
+20-06-2009
+- Intro has been replaced and now is part of the About CG Option
+- The original Intro screen is now included in the interpreter
+- Fullscreen bug has been fixed (Thanks to Tulip)
+- Patches by Pickle has been added. Performance for the wiz
+- Added 1680x1050 as Resolution for HD-Fans ;-) 
+
+18-06-2009
+- restored 2-Player support and added mapping
+- fixed some minor bugs!
+
+17-06-2009
+- 1280x1024 Resolution added
+- Added LAlt+Enter(Fullscreen), LAlt+Q and LAlt+F4(Quit) 
+
+15-06-2009
+- reduced the source code
+- added some new messages
+- added the aspect ratio correction for OpenGL who don't want streched screens.
+
+09-06-2009
+- removed "player seen a while in the mainmenu" bug
+- also added Auto-Frameskip for 70 FPS. Have fun!
+- CSettings class created and taken some functions out of the main file! 
+
+08-06-2009
+- Added Doublebuffering support
+- Detection of Bitmapsize in HQBitmap implemented
+- Added Wiz-code and some fixed bugs (Thanks to Pickle)
+
+07-06-2009
+- Improved the timer
+- Improved blit-speed at resolution of 320x200
+- Added automatic-frameskip
+
+05-06-2009
+- Fixed some OpenGL slowdowns and bugs
+
+04-06-2009
+- Fixed a crash when loading game with Fullscreen settings
+- Improved consistency of the Sound Class
+
+03-06-2009
+- Improved Scale2x and 3x algorithm
+- Added special filter options for OpenGL
+- First real implementation of OpenGL
+- Improved Scale2x Speed!
+- Added Scale4x Support (Only OpenGL)
+
+01-06-2009
+- Improved the CSound Class. Now the mixing of HQSounds use less memory, less code, and provides
+  even better quality. Also less processing. Isn't that neat?
+- Cleaned out all the remaining C Warnings
+
+31-09-2009
+- Fixes some HQ Sound Leaks
+- Corrected some bugs provoked crashes by some windows based systems. (Thanks to Tulip!)
+
+30-09-2009
+- New and improved CParser for the config-file. This one isn't buggy anymore!
+- improved the stereo. It hears more like stereo and requires less operations.
+  Multiplications replaced by bit-shift-operators.
+- Removed some old and obsolete files of the source code which weren't used anymore!!
+
+29-05-2009
+- 100% of the Sound classes finished
+- Better memory handling of the sounds
+- Sounds should be heard nicer. I hope so. Even the music.
+- still testing thoses classes
+- correction of minor bugs
+
+28-05-2009
+- 95% of the Sound classes finished
+- still testing thoses classes
+- An unknown bug which made CKP crash was discovered and fixed
+
+27-05-2009
+- 80% of the Sound classes finished
+
+24-05-2009
+- New Sound Model
+
+23-05-2009
+- Reduced the source code, deleting unused files
+- Implementation of Sound Class. At last.
+  Reduced memory usage due stacking method 
+
+22-05-2009
+- Some functions are classes now
+- fixed some memory leaks and bugs
+
+19-05-2009
+- Reenabled and enhanced close button.
+
+14-05-2009
+- Paused Dialog implemented. Press p to pause the game
+- Added cancel button to difficulty mode
+
+13-05-2009
+- Boosted up the 2x and 3x scaling without filter
+- Fixed some collision issues  
+
+12-05-2009
+- Fixed several bugs and broken 
+  features since Commander Genius Edition (DaVince)
+
+10-05-2009
+- Added HQBitmap support! At last!
+
+08-05-2009
+- Removed a big memory leak (18 MB on my system)!
+- Added menu opening effect, like the classical 
+  Commander Keen game had.
+- Improved performance
+- Converted some more functions into classes and objects
+
+03-05-2009
+- Implemented some more classes
+- Improved the performance a bit
+- Playing music requires less resources now
+- Fixed garg statue bug (Tulip)
+- added opening animation in some menus
+
+27-04-2009
+- Log file now saved as html file. This will improve the 
+readability of the interpreters process
+- Improved jump physics (Tulip) 
+
+17-04-2009
+- Added 32-bit Linux version
+
+10-04-2009
+- High Score Table as promised
+- improved some jump physics of the player (Tulip)
+
+
+08-04-2009
+- Fixed BSOD Problem, when intro is starting
+
+06-04-2009
+- Fixed some jump bugs. (Tulip)
+
+31-03-2009
+- Little fix for switches in Ep. 2
+
+29-03-2009: Fixed a blit error which made CKP in Win32 crash!
+- This also helped to get the video faster!
+
+28-03-2009: Hope this is better!
+- fixed other menu bugs
+- fixed some memory leaks!
+
+26-03-2009: Feel the power of C++!
+- Reenabled and improved joystick support
+- Fix some remaining bugs 
+
+- Improved Dialogs, especially the Main and Options menu 
+
+21-03-2009: For more Fans
+- New Dialog Class with scroll support added!
+
+19-03-2009: For more Fans
+- Ported to Windows
+- Changed some files and directories
+
+18-03-2009: After a long time
+- Added transparency feature
+- This version is ported to C++
+- More Resolutions are now supported
+
+04-03-2009: Save me
+- fixed some memory leaks
+- improved joystick support
+- menus can be controlled by the joystick again
+- added analog feature which can be turned off
+
+03-03-2009: And once again!
+- removed some useless code to save memory
+- Items in all episodes are now processed together
+  in one function.
+- Updated Scale2x functions. Added special SDL_scale2x
+  which boosts the performance a bit.
+
+02-03-2009: More and more!
+- Changed SDL_SetTimer by SDL_AddTimer which improves
+  the programming flexibility and bit of performance.
+- Added bump sound when you players try to walk into a wall
+- Fixed a tile bug with the Vorticon Elder
+- Fixed masked tile problem (Iv4n)
+
+01-03-2009: Improved Configuration!
+- Now all the settings except game data are stored in ckp.cfg, 
+  which also need less space.
+- New-old feature "two-button-firing"
+- New feature "keycard-stacking". Some mods need that 
+  if there are multiple doors
+- Some odd object bugs are fixed now. 
+  (Objects which go out of the screen)
+
+21-02-2009: No Filter2x, please!
+- 2x Scaling support without Filter is now supported
+- Minor bug fixes
+
+20-02-2009: Other tiles, why not?
+- Better Keyboard+Joystick Handling
+- Changed the jump physics a bit again(Ceilik)
+- Added the ability to load tiles.tli files.
+
+19-02-2009: hey cheater (or modder)
+- LShift+Tab implemented (Ceilik)
+- Less ingame inertia when jumping (Ceilik)
+
+18-02-2009: Same day, two versions
+- CTSpace fix (Genius)
+- walking in godmode on world now possible (Ceilik)
+
+17-02-2009: Same day, two versions
+- more bugs resolved (Tulip)
+- recovered and improved cheat mode (Tulip)
+
+16-02-2009: Same day, two versions
+- improved physics and controls (Genius314)
+
+16-02-2009: More bugs fixed!
+- improved physics (Genius314)
+
+15-02-2009: Axis at last!
+- improved physics (Genius314)
+- Support for axis mapping of joystick and analog sensitivity. Try it out!
+
+12-02-2009: Bugs and Beetles!
+- Fixed wrong sprite positioning in some levels (Tulip)
+- Some uncompressed mods exe-files are now supported. 
+  Tested with yorpius II. (Tulip)
+
+12-02-2009: Now try it!
+- imrproved jump/pogo physics! At least! (Forum-Team)
+
+09-02-2009: Bugs to eat!
+- Fixed sound bug, when no card is detected
+- Fixed a pogo problem
+- Fixed Story bug, when mods are used
+
+08-02-2009: Jump it on!
+- Implemented Story board. Isn't it nice?
+
+06-02-2009: Jump it on!
+- Improved jump and walk physics
+
+05-02-2009: A small update!
+- Improved Butlers AI (Tulip)
+- Extrem loud gun sounds are removed! (Tulip)
+- Gargs were too fast, when they saw you! (Tulip)
+- Extra fix for undefined level start positions of the player (Tulip)
+- Fixed stopping player animation, when Vorticon dies in Ep. 1 (Tulip)
+- A small platform bug has been removed (Tulip)
+
+04-02-2009: More, more!
+- Fixed Sounds playing in classical mode. Less memory is used now, and higher quality is achieved!
+- Door animations are fixed now. (Tulip) 
+- Fixed some menu bugs. (Sciz CT)
+
+03-02-2009: It's coming! It's coming
+- There was no sound effect for collecting the pogo. (Sciz CT)
+- Yorp collision needed work. Walking directly into one just halted
+ your progress and played the sound effect repeatedly, rather than
+ bouncing you back as it should. (Sciz CT)
+- Vortimoms needed 4 shots to kill. Now they need 5 like in the original game (Tulip)
+
+02-02-2009: Yorp don't do that!
+- The ceiling height was too high, fixed (Sciz CT)
+- Pogoing Problems fixed (Sciz CT)
+
+01-02-2009: Gonna be a remake!
+
+31-01-2009: Bug fixes and more!
+- Now "controls" menu won't crash anymore in Windows
+- Now all the Vorticons are more intelligent now (Tulip)
+- Butlers can fall (Tulip)
+- You can walk into butler from behind (Tulip)
+- Vortimom shoots more often now
+- Improved tile detection
+- Imrpoved memory managment
+
+30-01-2009: More intelligence!
+- Improved memory managment
+- Keen dies when falling off the screen now! (Tulip)
+- Keen cannot go out of maps anymore (Tulip)
+- Keen can stand again on Vortacola in Episode 2 (Tulip)
+
+
+28-01-2009: Isn't it hard enough?
+- More intelligent tileset loading
+- New Level loading and RLEW decompression. Now Mr. Blacks Levelpack of Keen 3 works very well!
+- Fixed some memory problems under Windows (fixes 1 and 2 integrated)
+
+
+28-01-2009: Isn't it hard enough?
+- Now you can choose difficulty level when starting a new game
+- Fixed Vortimom bug, when she fires to its left (Tulip)
+- Reduced size of tile attributes file. They are only used for the change of tiles. 
+  Everyone can now mod the tileinfo, load it with CKP and have fun
+- Fixed more memory leaks and remove some obsolete variables
+- Fixed other minor game bugs
+
+
+27-01-2009: More new engine functions!
+- Controls Config crash fixed for Windows Users!
+- Tile properties are now read  from the exe file, which make them shown behaved correctly
+- Fixed some memory leaks
+- Improved stereo sound when picking up items
+
+24-01-2009: Getting stable new engine!
+- Now the old options work again. Some new options are shown, but still don't work!
+- Fixed some segfault bugs
+
+23-01-2009: 3rd Prerelease of a new engine!
+- Fixed reading keen?.exe problem in Windows (Thanks to Tulip for his support!!)
+- Added fflush, so no more trimmed outputs under Windows (Thanks to Napalm)
+- Improved dying animation speed and synchro with the sound
+- Added some option menus, but they can't be seen. Please wait until next version.
+
+20-01-2009: 3rd Prerelease of a new engine!
+- Fixed some bugs when load startmenu and crashes in Windows (Especially XP)
+- Improved folder scanning
+- Keen now walks at constant speed on the map
+- "ckp.log" is the new log file. Useful for Windows users, when they want to report bugs
+
+19-01-2009: 2nd Prerelease of a new engine!
+- Fixed bug when loading game sounds from other directories than "data/", being Ep 2 and 3
+- Improved consistency check. You really don't need ctlpanel.ck?, but keen?.exe. (Thanks to Tulip!)
+- Games that will not run are marked gray now in the start menu
+- Startmenu has the stars background from your episode 1
+- "New Game" added to Main Menu. Now you can switch back to the Start Menu
+- Fullscreen bug fixed!
+- Their was a bug with keycards which are removed now, when a level is exited (Thanks to Tulip!)
+
+18-01-2009: Prerelease of a new engine!
+- Smoother scrolling
+- Added 48Khz Sound. It hears nice!
+- New driver engine. Should be more stable and no sounds are required to run the game
+- Note: Some options are disabled. They will be enabled again, in the next release with better menus
+- Files detection from the beginning
+- Startmenu marks error if your games or mods are incomplete
+- Fixed teleporting sound
+
+13-01-2009: Cross-compiling here we come!
+- Separation of HQ Sounds. You now must download the extra package, 
+  to use them. (Thanks to Hans de Goede for that idea)
+- for the people who have to rename the data files caused by the new
+  convention. There is a renamer script in the data directory.  
+- lower-case naming convention (Thanks to Hans de Goede for that idea)
+- Improved sound effects (Malvineous and Tulip)
+- Windows version will be released in future as binary  
+- Cleaned a bit more the source code, but there are still bugs left.
+
+
+09-01-2009: Only a small change!
+- Games can be separated in directories and are shown with "games.cfg"
+  in a startmenu. (Commander Spleen)
+- Cleaned a bit the source code.
+
+07-01-2009: Only a small change!
+- You can choose between Stereo and Mono Sound now.
+
+06-01-2009: Play it louder!
+- OGG File format supported. which makes the download file a bit smaller
+- Better sound managment: Needs less memory for buffering.
+
+05-01-2009: Play it loud!
+- Now CloneKeenPlus uses 8 internal sound channels, instead of 4.  
+- Cleaned up a bit more the source code. This still must be done. I will do it for every release
+- High Quality Sounds! Now you can enjoy more your Sound Blaster playing Keen instead of hearing all the old choppy PC Speaker Sounds.
+  More of them will be implemented in the next version. The wave files are in the "data/hq/snd" directory.
+
+
+03-01-2009: Mapping support finally!
+- Now you can map your keyboard and joystick buttons for the first player. The support is limited to the actions, so movements
+  (up, down, right, left) cannot be mapped though.  
+- Cleaned up a bit the source code. Now the polled events memory is not reallocated anymore, which makes the game a bit faster (1 %).
+
+01-01-2009: Happy New year to all of you! We also have released a more promising version od CKP
+- Better memory management. More unused variables are deallocated now and new type of variables organisation has been
+  implemented. 
+
+31-12-2008: Code has been cleaned, ClonekeenPlus is even more stable now
+- Early implementation of key and button mapping. However it is still unusable
+
+29-12-2008: First released version of the interpreter. It is nearly the same programme as CloneKeen 0.83 Beta with following exceptions:
+
+- Cleaned up the code. Many warnings won't appear anymore!
+- Fixes that were written by Hans van de Goede (For Fedora Core) are implemented. Thank you very much!
+- Hans van de Goede had created a program for extracting SOUNDS.CK2 and .CK3. This Code is implemented here.
+  When clonekeenplus is launched, these files are extracted from KEEN2.EXE or KEEN3.EXE  
+- Configuration settings are now saved automatically. 
+- When exiting, the program will not crash anymore! SDL_Double_Free problem fixed!
+- Video memory instead of system memory will be used, when -ogl switch is used
+- Early Joystick support implemented. Test it! It works very nice!
