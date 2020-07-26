@@ -492,7 +492,7 @@ void InitBaseSearchPaths() {
 	AddToFileList(&basesearchpaths, "${BIN}");
 #else // all other systems (Linux, *BSD, OS/2, ...)
 #if defined(DINGOO)
-	AddToFileList(&basesearchpaths, "/media/data/local/home/.CommanderGenius");
+	AddToFileList(&basesearchpaths, "/home/retrofw/.CommanderGenius");
 #elif defined(ANDROID)
 	AddToFileList(&basesearchpaths, "${HOME}/SaveData");
 #else
@@ -795,14 +795,14 @@ std::string GetSystemDataDir() {
 std::string	binary_dir; // given by argv[0], set by main()
 
 
-void SetBinaryDir(const std::string &binDir) 
+void SetBinaryDir(const std::string &binDir)
 {
 	binary_dir = binDir;
 }
 
 
 
-std::string GetBinaryDir() 
+std::string GetBinaryDir()
 {
 	return binary_dir;
 }
@@ -1119,4 +1119,3 @@ bool Rename(const std::string& oldpath, const std::string& newpath) {
 	std::string fullnewpath = searchpath + "/" + newpath;
 	return rename(fulloldpath.c_str(), fullnewpath.c_str()) == 0;
 }
-
