@@ -145,7 +145,7 @@ static GUI::ScreenSDL *UI_Startup(GUI::ScreenSDL *screen) {
 	}
 
 	cursor = SDL_ShowCursor(SDL_QUERY);
-	SDL_ShowCursor(SDL_ENABLE);
+	SDL_ShowCursor(SDL_DISABLE);
 
 	mousetoggle = mouselocked;
 	if (mouselocked) GFX_CaptureMouse();

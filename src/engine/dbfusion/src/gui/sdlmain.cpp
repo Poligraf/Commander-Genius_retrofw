@@ -727,7 +727,7 @@ void GFX_CaptureMouse(void) {
 		SDL_ShowCursor(SDL_DISABLE);
 	} else {
     //	SDL_WM_GrabInput(SDL_GRAB_OFF);
-		if (sdl.mouse.autoenable || !sdl.mouse.autolock) SDL_ShowCursor(SDL_ENABLE);
+		if (sdl.mouse.autoenable || !sdl.mouse.autolock) SDL_ShowCursor(SDL_DISABLE);
 	}
         mouselocked=sdl.mouse.locked;
 }
@@ -738,7 +738,7 @@ void GFX_UpdateSDLCaptureState(void) {
 		SDL_ShowCursor(SDL_DISABLE);
 	} else {
         //SDL_WM_GrabInput(SDL_GRAB_OFF);
-		if (sdl.mouse.autoenable || !sdl.mouse.autolock) SDL_ShowCursor(SDL_ENABLE);
+		if (sdl.mouse.autoenable || !sdl.mouse.autolock) SDL_ShowCursor(SDL_DISABLE);
 	}
 	CPU_Reset_AutoAdjust();
 	GFX_SetTitle(-1,-1,false);
@@ -2156,7 +2156,7 @@ int dosbox_main(int argc, const char* argv[])
 #endif
 	//Force visible mouse to end user. Somehow this sometimes doesn't happen
 //	SDL_WM_GrabInput(SDL_GRAB_OFF);
-	SDL_ShowCursor(SDL_ENABLE);
+	SDL_ShowCursor(SDL_DISABLE);
 
     //SDL_Quit();//Let's hope sdl will quit as well when it catches an exception
 	return 0;

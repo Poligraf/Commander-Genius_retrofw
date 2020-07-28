@@ -270,7 +270,7 @@ void BE_ST_ShutdownAll(void)
 	}
 	else
 	{
-		SDL_ShowCursor(true);
+		SDL_ShowCursor(false);
 	}
 //	BE_ST_ShutdownAudio();
 	BE_ST_ShutdownGfx();

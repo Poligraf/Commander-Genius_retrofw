@@ -2565,7 +2565,7 @@ void MAPPER_RunInternal()
     dosMapperRunning = true;
 
 	int cursor = SDL_ShowCursor(SDL_QUERY);
-	SDL_ShowCursor(SDL_ENABLE);
+	SDL_ShowCursor(SDL_DISABLE);
 	bool mousetoggle=false;
 	if(mouselocked) {
 		mousetoggle=true;
@@ -2792,4 +2792,3 @@ void MAPPER_StartUp(Section * sec) {
 	mapper.filename = pp->realpath;
 	MAPPER_AddHandler(&MAPPER_Run,MK_f1,MMOD1,"mapper","Mapper");
 }
-

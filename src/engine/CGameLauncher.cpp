@@ -53,7 +53,7 @@ mGameScanner(),
 m_firsttime(first_time),
 m_start_game_no(start_game_no),
 m_start_level(start_level)
-{	
+{
     g_pSound->unloadSoundData();
     // The last menu has been removed. Restore back the game status
     g_pBehaviorEngine->setPause(false);
@@ -366,7 +366,7 @@ bool CGameLauncher::scanExecutables(const std::string& path)
 void CGameLauncher::start()
 {
     // Here it always makes sense to have the mouse cursor active
-    SDL_ShowCursor(SDL_ENABLE);
+    SDL_ShowCursor(SDL_DISABLE);
 
     // Set the native resolution
     gVideoDriver.setNativeResolution(gVideoDriver.getVidConfig().m_DisplayRect);
