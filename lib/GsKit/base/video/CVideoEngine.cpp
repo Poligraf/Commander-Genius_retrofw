@@ -67,7 +67,7 @@ bool CVideoEngine::init()
 #if defined(CAANOO) || defined(WIZ) || defined(DINGOO) || defined(NANONOTE) || defined(ANDROID) || defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR)
 	m_Mode = SDL_SWSURFACE;
 #elif defined(GP2X)
-	m_Mode = SDL_HWSURFACE;
+	m_Mode = SDL_SWSURFACE;
 #else
 	// Support for double-buffering
     #if SDL_VERSION_ATLEAST(2, 0, 0)
@@ -104,7 +104,7 @@ bool CVideoEngine::init()
 #if SDL_VERSION_ATLEAST(2, 0, 0)
 
 #else
-            m_Mode |= (SDL_TRIPLEBUF | SDL_HWSURFACE);
+            m_Mode |= (SDL_TRIPLEBUF | SDL_SWSURFACE);
 #endif
 		}
 	}
@@ -236,7 +236,7 @@ bool CVideoEngine::createSurfaces(const GsRect<Uint16> &gamerect)
         mpScreenSfc = &mGameSfc;
     }
 
-    initOverlaySurface(blit->w, blit->h);       
+    initOverlaySurface(blit->w, blit->h);
 
 #if SDL_VERSION_ATLEAST(2, 0, 0)
     mpSDLScreenTexture.reset( SDL_CreateTexture(renderer,

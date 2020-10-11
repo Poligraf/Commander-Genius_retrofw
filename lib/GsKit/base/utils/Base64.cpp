@@ -139,5 +139,3 @@ void base64Decode(BYTE *outBuffer, const std::basic_string<char> &inBuffer)
        outBuffer[i++] = item;
    }
 }
-
-

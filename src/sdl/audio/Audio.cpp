@@ -56,7 +56,7 @@ mUseSoundBlaster(false),
 m_OPL_Player(mAudioSpec),
 m_pause_gameplay(false)
 {
-	mAudioSpec.channels = 2; // Stereo Sound
+	mAudioSpec.channels = 1; // Stereo Sound
 	mAudioSpec.format = AUDIO_S16; // 16-bit sound
 	mAudioSpec.freq = 44100; // high quality
 
@@ -252,7 +252,7 @@ void Audio::callback(void *unused, Uint8 *stream, int len)
         subCallback(unused, stream, len);
     }
 
-	if(!mpAudioRessources)        
+	if(!mpAudioRessources)
     {
         m_callback_running = false;
 		return;
@@ -260,7 +260,7 @@ void Audio::callback(void *unused, Uint8 *stream, int len)
 
     m_MixedForm.resize(len);
 
-	Uint8* buffer = m_MixedForm.data();        
+	Uint8* buffer = m_MixedForm.data();
 
     if (g_pMusicPlayer->playing())
     {
@@ -458,8 +458,3 @@ void Audio::setSettings( const int rate,
 
 	setSettings(nAudio, useSB);
 }
-
-
-
-
-

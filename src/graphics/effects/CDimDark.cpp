@@ -53,7 +53,7 @@ void CDimDark::getSnapshot()
     #endif
     }*/
 
-    blitSfc.blitTo(mOldSurface);    
+    blitSfc.blitTo(mOldSurface);
 
     //mOldSurface.fillRGB(0, 255, 0);
 
@@ -141,4 +141,3 @@ void CDimDark::render()
 
     mDarkSurface.blitTo(blitSfc);
 }
-

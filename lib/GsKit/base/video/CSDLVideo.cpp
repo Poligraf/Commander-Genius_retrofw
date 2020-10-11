@@ -30,7 +30,7 @@ bool CSDLVideo::init()
     if(!CVideoEngine::init())
         return false;
 
-#if SDL_VERSION_ATLEAST(2, 0, 0)    
+#if SDL_VERSION_ATLEAST(2, 0, 0)
 
     if(m_VidConfig.mRenderScQuality == "linear")
         SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
@@ -129,7 +129,7 @@ bool CSDLVideo::initOverlaySurface(const Uint16 width,
 }
 
 
-void CSDLVideo::setLightIntensity(const float intensity)
+void CSDLVideo::setLightIntensity(const int intensity)
 {
     Uint8 intense = Uint8(intensity*255.0f);
 
@@ -157,7 +157,7 @@ void CSDLVideo::clearSurfaces()
 void CSDLVideo::transformScreenToDisplay()
 {
 
-#if SDL_VERSION_ATLEAST(2, 0, 0)            
+#if SDL_VERSION_ATLEAST(2, 0, 0)
     mpScreenSfc->lock();
     SDL_UpdateTexture(mpSDLScreenTexture.get(), nullptr, mpScreenSfc->getSDLSurface()->pixels, mpScreenSfc->width() * sizeof (Uint32));
     mpScreenSfc->unlock();

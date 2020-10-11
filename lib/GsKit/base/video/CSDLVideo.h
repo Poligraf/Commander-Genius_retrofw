@@ -24,7 +24,7 @@ public:
 	void collectSurfaces();
 	void clearSurfaces();
 
-    void setLightIntensity(const float intensity);
+    void setLightIntensity(const int intensity);
 
 	void scaleNoFilter( 	SDL_Surface *srcSfc,
 									const SDL_Rect *scrrect,

@@ -53,7 +53,7 @@ mGameScanner(),
 m_firsttime(first_time),
 m_start_game_no(start_game_no),
 m_start_level(start_level)
-{
+{	
     g_pSound->unloadSoundData();
     // The last menu has been removed. Restore back the game status
     g_pBehaviorEngine->setPause(false);

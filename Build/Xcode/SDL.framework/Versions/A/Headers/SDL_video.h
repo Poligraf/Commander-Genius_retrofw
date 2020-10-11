@@ -129,7 +129,7 @@ typedef struct SDL_Surface {
 /** Available for SDL_CreateRGBSurface() or SDL_SetVideoMode() */
 /*@{*/
 #define SDL_SWSURFACE	0x00000000	/**< Surface is in system memory */
-#define SDL_HWSURFACE	0x00000001	/**< Surface is in video memory */
+#define SDL_SWSURFACE	0x00000001	/**< Surface is in video memory */
 #define SDL_ASYNCBLIT	0x00000004	/**< Use asynchronous blits if possible */
 /*@}*/
 
@@ -160,7 +160,7 @@ typedef struct SDL_Surface {
 /** Evaluates to true if the surface needs to be locked before access */
 #define SDL_MUSTLOCK(surface)	\
   (surface->offset ||		\
-  ((surface->flags & (SDL_HWSURFACE|SDL_ASYNCBLIT|SDL_RLEACCEL)) != 0))
+  ((surface->flags & (SDL_SWSURFACE|SDL_ASYNCBLIT|SDL_RLEACCEL)) != 0))
 
 /** typedef for private surface blitting functions */
 typedef int (*SDL_blit)(struct SDL_Surface *src, SDL_Rect *srcrect,
@@ -333,7 +333,7 @@ extern DECLSPEC SDL_Rect ** SDLCALL SDL_ListModes(SDL_PixelFormat *format, Uint3
  * available.  The default is to emulate the requested pixel format if it
  * is not natively available.
  *
- * If SDL_HWSURFACE is set in 'flags', the video surface will be placed in
+ * If SDL_SWSURFACE is set in 'flags', the video surface will be placed in
  * video memory, if possible, and you may have to call SDL_LockSurface()
  * in order to access the raw framebuffer.  Otherwise, the video surface
  * will be created in system memory.
@@ -349,7 +349,7 @@ extern DECLSPEC SDL_Rect ** SDLCALL SDL_ListModes(SDL_PixelFormat *format, Uint3
  * at the video surface structure to determine the actual palette.
  * If SDL cannot guarantee that the colors you request can be set, 
  * i.e. if the colormap is shared, then the video surface may be created
- * under emulation in system memory, overriding the SDL_HWSURFACE flag.
+ * under emulation in system memory, overriding the SDL_SWSURFACE flag.
  *
  * If SDL_FULLSCREEN is set in 'flags', the SDL library will try to set
  * a fullscreen video mode.  The default is to create a windowed mode
@@ -525,7 +525,7 @@ extern DECLSPEC void SDLCALL SDL_GetRGBA(Uint32 pixel,
  *
  * The 'flags' tell what kind of surface to create.
  * SDL_SWSURFACE means that the surface should be created in system memory.
- * SDL_HWSURFACE means that the surface should be created in video memory,
+ * SDL_SWSURFACE means that the surface should be created in video memory,
  * with the same format as the display surface.  This is useful for surfaces
  * that will not change much, to take advantage of hardware acceleration
  * when being blitted to the display surface.
@@ -545,10 +545,10 @@ extern DECLSPEC void SDLCALL SDL_GetRGBA(Uint32 pixel,
  * but the surface format must be identical to the video surface format,
  * and the only way to access the pixels member of the surface is to use
  * the SDL_LockSurface() and SDL_UnlockSurface() calls.
- * If the requested surface actually resides in video memory, SDL_HWSURFACE
+ * If the requested surface actually resides in video memory, SDL_SWSURFACE
  * will be set in the flags member of the returned surface.  If for some
  * reason the surface could not be placed in video memory, it will not have
- * the SDL_HWSURFACE flag set, and will be created in system memory instead.
+ * the SDL_SWSURFACE flag set, and will be created in system memory instead.
  */
 extern DECLSPEC SDL_Surface * SDLCALL SDL_CreateRGBSurface
 			(Uint32 flags, int width, int height, int depth, 
@@ -569,7 +569,7 @@ extern DECLSPEC void SDLCALL SDL_FreeSurface(SDL_Surface *surface);
  * Not all surfaces require locking.  If SDL_MUSTLOCK(surface) evaluates
  * to 0, then you can read and write to the surface at any time, and the
  * pixel format of the surface will not change.  In particular, if the
- * SDL_HWSURFACE flag is not given when calling SDL_SetVideoMode(), you
+ * SDL_SWSURFACE flag is not given when calling SDL_SetVideoMode(), you
  * will not need to lock the display surface before accessing it.
  * 
  * No operating system or library calls should be made between lock/unlock

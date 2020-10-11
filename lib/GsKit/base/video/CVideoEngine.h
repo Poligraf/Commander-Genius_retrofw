@@ -92,7 +92,7 @@ public:
 	void blitScrollSurface();
 	void stop();
 
-    virtual void setLightIntensity(const float intensity) = 0;
+    virtual void setLightIntensity(const int intensity) = 0;
 
     SDL_Surface *getBlitSurface() { return mGameSfc.getSDLSurface(); }
 
@@ -179,4 +179,3 @@ protected:
 };
 
 #endif /* CVIDEOENGINE_H_ */
-

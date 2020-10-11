@@ -492,7 +492,11 @@ void InitBaseSearchPaths() {
 	AddToFileList(&basesearchpaths, "${BIN}");
 #else // all other systems (Linux, *BSD, OS/2, ...)
 #if defined(DINGOO)
-	AddToFileList(&basesearchpaths, "/home/retrofw/.CommanderGenius");
+
+	AddToFileList(&basesearchpaths, "${HOME}/.CommanderGenius");
+	AddToFileList(&basesearchpaths, ".");
+	AddToFileList(&basesearchpaths, "${BIN}");
+
 #elif defined(ANDROID)
 	AddToFileList(&basesearchpaths, "${HOME}/SaveData");
 #else
@@ -751,7 +755,7 @@ bool FileListIncludesExact(const searchpathlist* l, const std::string& f) {
 
 std::string GetHomeDir() {
 #ifndef WIN32
-#if defined(CAANOO) || defined(WIZ) || defined(GP2X) || defined(DINGOO) || defined(PANDORA)
+#if defined(CAANOO) || defined(WIZ) || defined(GP2X)|| defined(PANDORA)
 	char* home = getenv("PWD");
 #else
 	char* home = getenv("HOME");

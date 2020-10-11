@@ -329,7 +329,7 @@ check_surface:
 #if (HAVE_DDRAW_H) && defined(WIN32)
 check_gotbpp:
 #endif
-        /*if (sdl.desktop.fullscreen) gotbpp=SDL_VideoModeOK(640,480,testbpp,SDL_FULLSCREEN|SDL_HWSURFACE|SDL_HWPALETTE);
+        /*if (sdl.desktop.fullscreen) gotbpp=SDL_VideoModeOK(640,480,testbpp,SDL_FULLSCREEN|SDL_SWSURFACE|SDL_HWPALETTE);
         else*/ gotbpp=sdl.desktop.bpp;
 		/* If we can't get our favorite mode check for another working one */
 		switch (gotbpp) {
@@ -412,11 +412,11 @@ static SDL_Surface * GFX_SetupSurfaceScaled(Bit32u sdl_flags, Bit32u bpp) {
 	if (sdl.desktop.fullscreen) {
 		fixedWidth = sdl.desktop.full.fixed ? sdl.desktop.full.width : 0;
 		fixedHeight = sdl.desktop.full.fixed ? sdl.desktop.full.height : 0;
-        //sdl_flags |= SDL_FULLSCREEN|SDL_HWSURFACE;
+        //sdl_flags |= SDL_FULLSCREEN|SDL_SWSURFACE;
 	} else {
 		fixedWidth = sdl.desktop.window.width;
 		fixedHeight = sdl.desktop.window.height;
-        //sdl_flags |= SDL_HWSURFACE;
+        //sdl_flags |= SDL_SWSURFACE;
 	}
 
     SDL_Surface *sfc = gVideoDriver.getBlitSurface();
@@ -500,20 +500,20 @@ dosurface:
 				sdl.clip.x=(Sint16)((sdl.desktop.full.width-width)/2);
 				sdl.clip.y=(Sint16)((sdl.desktop.full.height-height)/2);
                 /*sdl.surface=SDL_SetVideoMode(sdl.desktop.full.width,sdl.desktop.full.height,bpp,
-					SDL_FULLSCREEN | ((flags & GFX_CAN_RANDOM) ? SDL_SWSURFACE : SDL_HWSURFACE) |
+					SDL_FULLSCREEN | ((flags & GFX_CAN_RANDOM) ? SDL_SWSURFACE : SDL_SWSURFACE) |
                     (sdl.desktop.doublebuf ? SDL_TRIPLEBUF|SDL_ASYNCBLIT : 0) | SDL_HWPALETTE);*/
                 if (sfc == NULL) E_Exit("Could not set fullscreen video mode %ix%i-%i: %s",sdl.desktop.full.width,sdl.desktop.full.height,bpp,SDL_GetError());
 			} else {
 				sdl.clip.x=0;sdl.clip.y=0;
                 /*sdl.surface=SDL_SetVideoMode(width,height,bpp,
-					SDL_FULLSCREEN | ((flags & GFX_CAN_RANDOM) ? SDL_SWSURFACE : SDL_HWSURFACE) |
+					SDL_FULLSCREEN | ((flags & GFX_CAN_RANDOM) ? SDL_SWSURFACE : SDL_SWSURFACE) |
                     (sdl.desktop.doublebuf ? SDL_TRIPLEBUF|SDL_ASYNCBLIT  : 0)|SDL_HWPALETTE);*/
                 if (sfc == NULL)
 					E_Exit("Could not set fullscreen video mode %ix%i-%i: %s",(int)width,(int)height,bpp,SDL_GetError());
 			}
 		} else {
 			sdl.clip.x=0;sdl.clip.y=0;
-            //sdl.surface=SDL_SetVideoMode(width,height,bpp,(flags & GFX_CAN_RANDOM) ? SDL_SWSURFACE : SDL_HWSURFACE);
+            //sdl.surface=SDL_SetVideoMode(width,height,bpp,(flags & GFX_CAN_RANDOM) ? SDL_SWSURFACE : SDL_SWSURFACE);
 #ifdef WIN32
             if (sfc == NULL) {
 				SDL_QuitSubSystem(SDL_INIT_VIDEO);
@@ -528,7 +528,7 @@ dosurface:
 				}
 				SDL_InitSubSystem(SDL_INIT_VIDEO);
 				GFX_SetIcon(); //Set Icon again
-                //sdl.surface = SDL_SetVideoMode(width,height,bpp,SDL_HWSURFACE);
+                //sdl.surface = SDL_SetVideoMode(width,height,bpp,SDL_SWSURFACE);
                 if(sfc) GFX_SetTitle(-1,-1,false); //refresh title.
 			}
 #endif
@@ -553,10 +553,10 @@ dosurface:
 
             //sdl.blit.surface = nullptr;
 
-/*			if (retFlags && (sdl.surface->flags & SDL_HWSURFACE))
+/*			if (retFlags && (sdl.surface->flags & SDL_SWSURFACE))
 				retFlags |= GFX_HARDWARE;
 			if (retFlags && (sdl.surface->flags & SDL_TRIPLEBUF)) {
-				sdl.blit.surface=SDL_CreateRGBSurface(SDL_HWSURFACE,
+				sdl.blit.surface=SDL_CreateRGBSurface(SDL_SWSURFACE,
 					sdl.draw.width, sdl.draw.height,
 					sdl.surface->format->BitsPerPixel,
 					sdl.surface->format->Rmask,
@@ -577,13 +577,13 @@ dosurface:
 		sdl.blit.rect.left=sdl.clip.x;
 		sdl.blit.rect.right=sdl.clip.x+sdl.clip.w;
 		sdl.blit.rect.bottom=sdl.clip.y+sdl.clip.h;
-		sdl.blit.surface=SDL_CreateRGBSurface(SDL_HWSURFACE,sdl.draw.width,sdl.draw.height,
+		sdl.blit.surface=SDL_CreateRGBSurface(SDL_SWSURFACE,sdl.draw.width,sdl.draw.height,
                 sfc->format->BitsPerPixel,
                 sfc->format->Rmask,
                 sfc->format->Gmask,
                 sfc->format->Bmask,
 				0);
-		if (!sdl.blit.surface || (!sdl.blit.surface->flags&SDL_HWSURFACE)) {
+		if (!sdl.blit.surface || (!sdl.blit.surface->flags&SDL_SWSURFACE)) {
 			if (sdl.blit.surface) {
 				SDL_FreeSurface(sdl.blit.surface);
 				sdl.blit.surface=0;
