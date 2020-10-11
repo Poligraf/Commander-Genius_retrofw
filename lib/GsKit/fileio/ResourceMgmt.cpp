@@ -40,7 +40,7 @@ std::string getResourceFilename(const std::string& filename, const std::string& 
     if(gamepath != "")
     {
         vfs_path = JoinPaths(gamepath, filename);
-        text = "Looking for " + vfs_path + " ... ";
+      //  text = "Looking for " + vfs_path + " ... ";
         // try to look at the local path of the game.
         if(!IsFileAvailable(vfs_path))
             vfs_path = "";
@@ -50,7 +50,7 @@ std::string getResourceFilename(const std::string& filename, const std::string& 
     {
         // if it didn't find the file try looking at the global resources
         vfs_path = JoinPaths(GLOBAL_DIR, filename);
-        text = "Looking for " + vfs_path + " ... ";
+    //    text = "Looking for " + vfs_path + " ... ";
 
         if(!IsFileAvailable(vfs_path))
             vfs_path = "";
@@ -67,7 +67,7 @@ std::string getResourceFilename(const std::string& filename, const std::string& 
             text.clear();
     }
     else
-        text += "found!\n";
+      //  text += "found!\n";
 
     if(!text.empty())
         gLogging.textOut(GREEN, text);

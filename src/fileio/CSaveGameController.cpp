@@ -118,7 +118,7 @@ bool CSaveGameController::readSlotList(std::vector<std::string> &list)
 
     //Get the list of ".ck?" and ".cx?" files
 	StateFileListFiller sfilelist;
-    gLogging.ftextOut("Reading savegames from \"%s\"", m_savedir.c_str());
+    //gLogging.ftextOut("Reading savegames from \"%s\"", m_savedir.c_str());
 	FindFiles(sfilelist, m_savedir, false, FM_REG);
 
     for( const std::string &filename : sfilelist.list )
@@ -146,7 +146,7 @@ bool CSaveGameController::readSlotList(std::vector<std::string> &list)
 		}
 	}
 
-    gLogging.ftextOut("Done");
+    //gLogging.ftextOut("Done");
 
     return !list.empty();
 }

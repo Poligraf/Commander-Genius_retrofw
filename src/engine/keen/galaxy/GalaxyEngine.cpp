@@ -65,7 +65,7 @@ bool loadLevelMusic(const int level)
 
 
 void GalaxyEngine::openMainMenu()
-{    
+{
     // Check if music is playing and pause if it is
     if(g_pMusicPlayer->active())
     {
@@ -135,24 +135,24 @@ bool GalaxyEngine::loadResources( const Uint8 flags )
 
             if( (mFlags & LOADSND) == LOADSND )
             {
-                gLogging.ftextOut("Loading audio... <br>");
-                // Load the sound data                
+              //  gLogging.ftextOut("Loading audio... <br>");
+                // Load the sound data
                 setupAudio();
 
                 mLoader.setPermilage(900);
-                gLogging.ftextOut("Done loading audio.<br>");
+              //  gLogging.ftextOut("Done loading audio.<br>");
             }
 
-            gLogging.ftextOut("Loading game constants...<br>");
+          //  gLogging.ftextOut("Loading game constants...<br>");
 
             g_pBehaviorEngine->getPhysicsSettings().loadGameConstants(Episode, p_exedata);
 
-            gLogging.ftextOut("Looking for patches...<br>");
+          //  gLogging.ftextOut("Looking for patches...<br>");
 
             // If there are patches left that must be applied later, do it here!
             Patcher.postProcess();
 
-            gLogging.ftextOut("Done loading the resources...<br>");
+            //gLogging.ftextOut("Done loading the resources...<br>");
 
             mLoader.setPermilage(1000);
 
@@ -210,7 +210,7 @@ void GalaxyEngine::pumpEvent(const CEvent *evPtr)
         g_pBehaviorEngine->mPlayers = pNewGame->mSelection;
         gEventManager.add( new OpenMenuEvent(new CDifficultySelection) );
         return;
-    }    
+    }
     // Control Menu Events
     else if( const OpenMovementControlMenuEvent* ctrlMenu = dynamic_cast<const OpenMovementControlMenuEvent*>(evPtr) )
     {
@@ -235,10 +235,10 @@ void GalaxyEngine::pumpEvent(const CEvent *evPtr)
         const GMSwitchToPlayGameMode &playGame = const_cast<GMSwitchToPlayGameMode&>(*pPlayGame);
         mpGameMode.reset( new CPlayGameGalaxy(playGame.m_startlevel) );
         mpGameMode->init();
-        mOpenedGamePlay = true;        
+        mOpenedGamePlay = true;
         g_pBehaviorEngine->setPause(false);
         gEventManager.add( new CloseAllMenusEvent() );
-    }    
+    }
     else if( dynamic_cast<const LoadGameEvent*>(evPtr) ) // If GamePlayMode is not running but loading is requested...
     {
         std::unique_ptr<CPlayGameGalaxy> pgGalaxy(new CPlayGameGalaxy(0));

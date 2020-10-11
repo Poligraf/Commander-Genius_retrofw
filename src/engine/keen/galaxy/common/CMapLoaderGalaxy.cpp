@@ -64,31 +64,31 @@ size_t CMapLoaderGalaxy::getMapheadOffset()
 size_t findInStream(std::ifstream &stream, const std::string &sig)
 {
   const size_t start = stream.tellg();
-    
+
   while(!stream.eof())
-  {	
+  {
 	auto it = sig.begin();
 	for( size_t s=0 ; it != sig.end() ; it++, s++ )
 	{
 	  char c = stream.get();
-	  
+
 	  if( sig[s] != c )
 	    break;
 	}
-	
+
 	if( it == sig.end() )
 	  break;
   }
-  
+
   size_t pos;
-  
+
   if(stream.eof())
     pos = std::string::npos;
   else
     pos = stream.tellg();
-  
+
   stream.seekg(start);
-  
+
   return pos;
 }
 
@@ -98,14 +98,14 @@ bool CMapLoaderGalaxy::gotoNextSignature(std::ifstream &MapFile)
   // try the original "!ID!" Sig...
 	size_t pos = findInStream(MapFile, "!ID!");
 	MapFile.seekg( pos, std::ios::beg );
-	
+
 	if(pos != std::string::npos)
 	  return true;
 
 	gLogging.textOut("Warning! Your are opening a map which is not correctly signed. Some Mods, using different Editors, have that issue!!");
 	gLogging.textOut("If you are playing a mod it might okay though. If it's an original game, it is tainted. Continuing...");
-	
-	return false;	
+
+	return false;
 }
 
 void CMapLoaderGalaxy::unpackPlaneData(std::ifstream &MapFile,
@@ -125,28 +125,28 @@ void CMapLoaderGalaxy::unpackPlaneData(std::ifstream &MapFile,
 
 	size_t decarmacksize = (Carmack_Plane.at(1)<<8)+Carmack_Plane.at(0);
 
-	
 
 
-      
+
+
 	// Now use the Carmack Decompression
 	CCarmack Carmack;
 	Carmack.expand(RLE_Plane, Carmack_Plane);
-	Carmack_Plane.clear();      
-	
+	Carmack_Plane.clear();
+
       if( decarmacksize > RLE_Plane.size() )
       {
-	  gLogging.textOut( "\nWARNING Plane Uncompress Carmack Size differs to the one of the headers: Actual " + itoa(RLE_Plane.size()) + 
-			      " bytes Expected " + itoa(decarmacksize) + " bytes. Trying to reconstruct level anyway!<br>");	  
-	  
+	  gLogging.textOut( "\nWARNING Plane Uncompress Carmack Size differs to the one of the headers: Actual " + itoa(RLE_Plane.size()) +
+			      " bytes Expected " + itoa(decarmacksize) + " bytes. Trying to reconstruct level anyway!<br>");
+
 	  while( decarmacksize > RLE_Plane.size() )
 	    RLE_Plane.push_back(0);
-      }	
-		
-	
+      }
+
+
     if( decarmacksize >= RLE_Plane.size() )
     {
-                  
+
     	// Now use the RLE Decompression
     	CRLE RLE;
         size_t derlesize = (RLE_Plane[0]<<8)+RLE_Plane[1];           // Bytes already swapped
@@ -187,16 +187,16 @@ bool CMapLoaderGalaxy::loadMap(CMap &Map, Uint8 level)
   // Get the MAPHEAD Location from within the Exe File or an external file
   std::vector<char> mapHeadContainer;
   const std::string &path = gKeenFiles.gameDir;
-  
+
   // Set Map position and some flags for the freshly loaded level
   Map.gotoPos(0,0);
   Map.setLevel(level);
   Map.isSecret = false;
   Map.mNumFuses = 0;
-  
+
   // In case no external file was read, let's use data from the embedded data
   byte *Maphead = gKeenFiles.exeFile.getRawData() + getMapheadOffset();
-  
+
   // In case there is an external file read it into the container and replace the pointer
   const std::string mapHeadFilename = gKeenFiles.mapheadFilename;
   std::ifstream MapHeadFile;
@@ -211,21 +211,21 @@ bool CMapLoaderGalaxy::loadMap(CMap &Map, Uint8 level)
       MapHeadFile.read(&mapHeadContainer[0],length*sizeof(char));
       Maphead = reinterpret_cast<byte*>(&mapHeadContainer[0]);
   }
-  
+
   word magic_word;
   longword level_offset;
-  
+
   // Get the magic number of the level data from MAPHEAD Located in the EXE-File.
   // This is used for the decompression.
   magic_word = READWORD(Maphead);
-  
+
   // Get location of the level data from MAPHEAD Located in the EXE-File.
   Maphead += level*sizeof(longword);
   level_offset = READLONGWORD(Maphead);
-  
+
   // Open the Gamemaps file
   std::string gamemapfile = gKeenFiles.gamemapsFilename;
-  
+
   std::ifstream MapFile;
   if(OpenGameFileR(MapFile, getResourceFilename(gamemapfile,path,true,false), std::ios::binary))
   {
@@ -303,13 +303,13 @@ bool CMapLoaderGalaxy::loadMap(CMap &Map, Uint8 level)
     name[16] = '\0';
 
     // Get and check the signature
-    gLogging.textOut("Loading the Level \"" + static_cast<std::string>(name) + "\" (Level No. "+ itoa(level) + ")<br>" );
+  //  gLogging.textOut("Loading the Level \"" + static_cast<std::string>(name) + "\" (Level No. "+ itoa(level) + ")<br>" );
     Map.setLevelName(name);
 
     mLevelName = name;
 
     // Then decompress the level data using rlew and carmack
-    gLogging.textOut("Decompressing the Map...<br>" );
+  //  gLogging.textOut("Decompressing the Map...<br>" );
 
     // Start with the Background
     Map.createEmptyDataPlane(0, Width, Height);
@@ -338,7 +338,7 @@ bool CMapLoaderGalaxy::loadMap(CMap &Map, Uint8 level)
   // Set Scrollbuffer
   Map.drawAll();
   gVideoDriver.updateScrollBuffer(Map.m_scrollx, Map.m_scrolly);
-  
+
   return true;
 }
 
@@ -363,7 +363,7 @@ void CMapLoaderGalaxy::spawnFoes(CMap &Map)
 
 	// he we go to the adding objects
 	Map.mNumFuses = 0;
-	Map.mFuseInLevel = false;		
+	Map.mFuseInLevel = false;
 	data_ptr = start_data;
 	for(size_t y=0 ; y<height ; y++)
 	{
